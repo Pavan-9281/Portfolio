@@ -23,7 +23,7 @@ export const Projects = () => {
       fullDescription: 'Crypto Pay is a comprehensive Web3.0 decentralized application (DApp) built for secure peer-to-peer money transfers on the Ethereum blockchain. The project features robust Solidity smart contracts developed and tested using the Hardhat framework, ensuring secure and efficient transactions. The frontend is built with React.js and integrates seamlessly with the blockchain through Web3.js and Ethers.js libraries. Users can connect their MetaMask wallets to perform secure transactions, while IPFS (InterPlanetary File System) is leveraged for decentralized storage of transaction data, ensuring data integrity and availability across the network.',
       technologies: ['React.js', 'Solidity', 'Web3.js', 'Ethers.js', 'Hardhat', 'MetaMask', 'IPFS'],
       category: 'Blockchain & Web3',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      image: 'https://www.dunhamandcompany.com/wp-content/uploads/2020/05/GettyImages-1034363382-e1589830000885.jpg',
       features: ['Smart contract development', 'MetaMask wallet integration', 'Peer-to-peer transactions', 'Decentralized storage with IPFS', 'Secure blockchain transactions', 'Web3.js integration'],
       challenges: 'Implementing secure smart contracts and ensuring proper wallet integration with error handling',
       outcome: 'Successfully developed a fully functional DApp for secure cryptocurrency transactions on Ethereum'
