@@ -156,7 +156,7 @@ export const Contact = () => {
         {/* Footer */}
         <div className="mt-16 lg:mt-20 pt-6 lg:pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-600 text-sm lg:text-base">
-            © 2025 All rights reserved.
+            © 2025 Tanniru Pavan All rights reserved.
           </p>
         </div>
       </div>
