@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -17,6 +16,17 @@ export const Projects = () => {
       features: ['Multiple ML algorithms', 'Real-time data processing', 'Early warning system', 'Medical data analysis'],
       challenges: 'Working with sensitive medical data and ensuring high accuracy for life-critical predictions',
       outcome: 'Developed a robust ML system with high accuracy in predicting cardiac arrest events'
+    },
+    {
+      title: 'Crypto Pay',
+      shortDescription: 'A Web3.0 DApp for secure peer-to-peer money transfers on the Ethereum blockchain.',
+      fullDescription: 'Crypto Pay is a comprehensive Web3.0 decentralized application (DApp) built for secure peer-to-peer money transfers on the Ethereum blockchain. The project features robust Solidity smart contracts developed and tested using the Hardhat framework, ensuring secure and efficient transactions. The frontend is built with React.js and integrates seamlessly with the blockchain through Web3.js and Ethers.js libraries. Users can connect their MetaMask wallets to perform secure transactions, while IPFS (InterPlanetary File System) is leveraged for decentralized storage of transaction data, ensuring data integrity and availability across the network.',
+      technologies: ['React.js', 'Solidity', 'Web3.js', 'Ethers.js', 'Hardhat', 'MetaMask', 'IPFS'],
+      category: 'Blockchain & Web3',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+      features: ['Smart contract development', 'MetaMask wallet integration', 'Peer-to-peer transactions', 'Decentralized storage with IPFS', 'Secure blockchain transactions', 'Web3.js integration'],
+      challenges: 'Implementing secure smart contracts and ensuring proper wallet integration with error handling',
+      outcome: 'Successfully developed a fully functional DApp for secure cryptocurrency transactions on Ethereum'
     },
   ];
 
@@ -44,16 +54,6 @@ export const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Button size="sm" className="bg-white text-gray-900 hover:bg-gray-100">
-                    <ExternalLink size={16} className="mr-2" />
-                    View
-                  </Button>
-                  <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-                    <Github size={16} className="mr-2" />
-                    Code
-                  </Button>
-                </div>
               </div>
               
               <div className="p-4 sm:p-6">
@@ -153,14 +153,15 @@ export const Projects = () => {
                   </div>
 
                   <div className="flex gap-4 pt-4">
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-                      <ExternalLink size={16} className="mr-2" />
-                      View Live Project
-                    </Button>
-                    <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50">
+                    <a 
+                      href="https://github.com/Pavan-9281"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                    >
                       <Github size={16} className="mr-2" />
-                      View Source Code
-                    </Button>
+                      View on GitHub
+                    </a>
                   </div>
                 </div>
               </div>
