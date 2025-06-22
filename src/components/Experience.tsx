@@ -24,7 +24,7 @@ export const Experience = () => {
       title: 'Cisco-Introduction to Cyber Security',
       issuer: 'Cisco Networking Academy',
       year: '2024'
-    }
+    },
     {
       title: 'EduSkills-Certification of completion of Java Full Stack',
       issuer: 'EduSkills',
@@ -34,7 +34,7 @@ export const Experience = () => {
       title: 'SmartInterviews Smart Coder',
       issuer: 'SmartInterviews',
       year: '2025'
-    },
+    }
   ];
 
   return (
