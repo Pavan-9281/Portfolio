@@ -12,7 +12,7 @@ export const Projects = () => {
       fullDescription: 'Applied advanced machine learning techniques to analyze vital signs for early detection of cardiac arrest in newborn babies. This healthcare-focused project utilized various ML models including Logistic Regression, Support Vector Machines (SVM), Decision Trees, and Artificial Neural Networks to predict potential cardiac events. The system processes real-time vital sign data and provides early warning alerts to medical professionals, potentially saving lives through timely intervention.',
       technologies: ['Python', 'Machine Learning', 'Data Analysis', 'Healthcare'],
       category: 'Machine Learning',
-      image: '/lovable-uploads/eba6041a-1fdb-4a8a-939c-327ad48878f5.png',
+      image: 'https://tamil.boldsky.com/img/2024/07/viral-infection-triggers-cardiac-arrest-big-1722237702.jpg',
       features: ['Multiple ML algorithms', 'Real-time data processing', 'Early warning system', 'Medical data analysis'],
       challenges: 'Working with sensitive medical data and ensuring high accuracy for life-critical predictions',
       outcome: 'Developed a robust ML system with high accuracy in predicting cardiac arrest events'
