@@ -21,20 +21,20 @@ export const Experience = () => {
 
   const certifications = [
     {
-      title: 'EduSkills-Certification of completion of Java Full Stack',
-      issuer: 'EduSkills',
-      year: '2024'
-    },
-    {
-      title: 'SmartInterviews Smart Coder',
-      issuer: 'SmartInterviews',
-      year: '2024'
-    },
-    {
       title: 'Cisco-Introduction to Cyber Security',
       issuer: 'Cisco Networking Academy',
       year: '2024'
     }
+    {
+      title: 'EduSkills-Certification of completion of Java Full Stack',
+      issuer: 'EduSkills',
+      year: '2025'
+    },
+    {
+      title: 'SmartInterviews Smart Coder',
+      issuer: 'SmartInterviews',
+      year: '2025'
+    },
   ];
 
   return (
