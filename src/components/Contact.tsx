@@ -1,78 +1,10 @@
+
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useState } from 'react';
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
-      setSubmitStatus('error');
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setSubmitStatus('error');
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      // Using EmailJS service (you'll need to set this up)
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API call
-      
-      // You can replace this with actual EmailJS implementation
-      // const templateParams = {
-      //   from_name: `${formData.firstName} ${formData.lastName}`,
-      //   from_email: formData.email,
-      //   subject: formData.subject,
-      //   message: formData.message,
-      // };
-      // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY');
-      
-      setSubmitStatus('success');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -173,103 +105,49 @@ export const Contact = () => {
           {/* Contact Form */}
           <div className="bg-white p-6 lg:p-8 rounded-xl shadow-sm">
             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 text-center lg:text-left">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
+            <form className="space-y-4 lg:space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name *
+                    First Name
                   </label>
-                  <Input 
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    placeholder="Your first name" 
-                    required
-                  />
+                  <Input placeholder="Your first name" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name *
+                    Last Name
                   </label>
-                  <Input 
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    placeholder="Your last name" 
-                    required
-                  />
+                  <Input placeholder="Your last name" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email *
+                  Email
                 </label>
-                <Input 
-                  type="email" 
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your.email@example.com" 
-                  required
-                />
+                <Input type="email" placeholder="your.email@example.com" />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject *
+                  Subject
                 </label>
-                <Input 
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  placeholder="What's this about?" 
-                  required
-                />
+                <Input placeholder="What's this about?" />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
+                  Message
                 </label>
                 <Textarea 
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
                   placeholder="Tell me about your project or just say hello!"
                   rows={6}
-                  required
                 />
               </div>
 
-              {submitStatus === 'success' && (
-                <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-800 text-sm">Thank you! Your message has been sent successfully.</p>
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-red-800 text-sm">There was an error sending your message. Please try again.</p>
-                </div>
-              )}
-
-              <Button 
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="mr-2" size={20} />
-                    Send Message
-                  </>
-                )}
+              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                <Send className="mr-2" size={20} />
+                Send Message
               </Button>
             </form>
           </div>
