@@ -60,7 +60,7 @@ export const Hero = () => {
 
             <div className="flex justify-center lg:justify-start">
               <a 
-                href="https://drive.google.com/file/d/1MnZCpFz9QS98pzCy7AqVRSHJQq79U4Ns/view?usp=sharing"
+                href="https://drive.google.com/file/d/121zM2SCuXq8vo6UY1c2ghjUUVYC07ugW/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-6 lg:px-8 py-3 rounded-full transition-colors duration-200"
